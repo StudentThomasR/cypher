@@ -43,17 +43,6 @@ namespace cypher
             }
             return outputstring;
         }
-        static string Decrypt(string input)
-        {
-            List<char> charlist = new List<char>();
-            foreach (char character in input)
-            {
-                charlist.Add(character);
-            }
-            charlist.Reverse();
-            charlist.Insert(0,charlist[charlist.Count]);
-            charlist.RemoveAt(charlist.Count);
-            return "Error";
-        }
+        
     }
 }
