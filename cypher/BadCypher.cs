@@ -52,9 +52,9 @@ namespace cypher
             {
                 charlist.Add(character);
             }
-            char firstchar = charlist[0];
-            charlist.Add(firstchar);
-            charlist.RemoveAt(0);
+            char firstchar = charlist[charlist.Count-1];
+            charlist.Insert(0,firstchar);
+            charlist.RemoveAt(charlist.Count-1);
             charlist.Reverse();
             for (int index = 0; index < charlist.Count; index++)
             {

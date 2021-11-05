@@ -19,7 +19,11 @@ namespace cypher
         {
             {
                 Console.WriteLine(BadCypher.Encrypt("hello"));
-                Debug.Assert(BadCypher.Encrypt("hello")=="mmfip");  
+                Debug.Assert(BadCypher.Encrypt("hello")=="mmfip"); 
+            }
+            {
+                Console.WriteLine(BadCypher.Decrypt("mmfip"));
+                Debug.Assert(BadCypher.Decrypt("mmfip") == "hello");
             }
         }
     }
