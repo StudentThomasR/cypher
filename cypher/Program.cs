@@ -14,7 +14,7 @@ namespace cypher
         public CypherProgram()
         {
             testsuite();
-        }
+       }
         void testsuite()
         {
             {
