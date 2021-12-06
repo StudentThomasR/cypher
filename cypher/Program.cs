@@ -1,4 +1,7 @@
-﻿using System;
+﻿/*
+ * 1.  This code uses classes to perform functions. Most of the comments will be in the class file. 
+ */
+using System;
 using System.Diagnostics;
 namespace cypher
 {
@@ -6,20 +9,21 @@ namespace cypher
     {
         static void Main(string[] args)
         {
-            new CypherProgram();
+            new CypherProgram(); 
         }
     }
     class CypherProgram
     {
-        public CypherProgram()
+        public CypherProgram() //2.This is the constructor for the cypher program class which is used to create attributes or run functions.
+
         {
             testsuite();
         }
         void testsuite()
         {
             {
-                Console.WriteLine(BadCypher.Encrypt("hello"));
-                Debug.Assert(BadCypher.Encrypt("hello") == "mmfip");
+                Console.WriteLine(BadCypher.Encrypt("hello")); //6. This is the Encrypt function being used because I declared the class and functions as static, to access this function you put the class name then a fullstop and then the function name.
+                Debug.Assert(BadCypher.Encrypt("hello") == "mmfip");//7. This is a test line. It will stop the program if the test fails. This is testing the encryption of "hello" which should equal "mmfip".
             }
             {
                 Console.WriteLine(BadCypher.Decrypt("mmfip"));
