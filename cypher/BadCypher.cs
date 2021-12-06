@@ -2,13 +2,19 @@
 using System.Collections.Generic;
 namespace cypher
 {
-     static class BadCypher //3.This is the class declaration which declares the class and gives it a name. This one is declared static which means you dont have to initialize it in the main program.
+     static class BadCypher //3.This is the class declaration which declares the class and gives it a name.
+                            //This one is declared static which means you dont have to initialize it in the main program.
     {
-      public  static string Encrypt(string input) //4.This is a class member function which is called 'Encrypt'. It is also declared static. As the class is static, all the member functions have to be declared static as well . 
-       //5.This member function is also declared public. This means that this member function can be used outside it's native class. This means that I can use it in my main program file. 
+      public  static string Encrypt(string input) //4.This is a class member function which is called 'Encrypt'.
+                                                  //It is also declared static. As the class is static, all the
+                                                  //member functions have to be declared static as well . 
+       //5.This member function is also declared public. This means that this member function can be used outside
+       //it's native class. This means that I can use it in my main program file. 
         {
             List < char > charlist = new List<char>();
-            List<byte> asciilist = new List<byte>(); // I decided to use ascii to shift the letters, however the other way that I could have gone about this is to create a list with the alphabet in, itterate through that list. Then swap the values. This way was alot easier and learnt how to use ascii instead of just writing about it.  
+            List<byte> asciilist = new List<byte>(); // I decided to use ascii to shift the all the letters one place in the alphabet.
+                                                     // The other way that I could have gone about this is to create a list with the alphabet in, itterate through that list.
+                                                     // Then swap the values. This way was alot easier and learnt how to use ascii instead of just writing about it.  
             string outputstring = "";
             foreach (char character in input)
             {
