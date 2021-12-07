@@ -52,12 +52,12 @@ namespace cypher
         }
         public static string Decrypt(string input)
         {
-            List<char> charlist = new List<char>();
+            List<char> charlist = new List<char>(); // This is a collection of characters that will be used to store the initial input after I convert it. 
             List<byte> asciilist = new List<byte>();
             string outputstring = "";
-            foreach (char character in input)
+            foreach (char character in input) // This 'foreach' statement integrates through the input string and converts it into characters.
             {
-                charlist.Add(character);
+                charlist.Add(character); // This line adds the character into charlist.
             }
             char firstchar = charlist[charlist.Count-1];
             charlist.Insert(0,firstchar);
@@ -65,25 +65,25 @@ namespace cypher
             charlist.Reverse();
             for (int index = 0; index < charlist.Count; index++)
             {
-                if (charlist[index] == 'a')
+                if (charlist[index] == 'a') // This 'if' statement handles the A to Z loop by manually setting the ascii value which corresponds to Z when there is an A in the list. 
                 {
                     asciilist.Add(122);
                 }
-                else if (charlist[index] == 'A')
+                else if (charlist[index] == 'A') // This 'else if' does the same as line 68 but for capital A instead. This means that capitalisation is preserved.
                 {
                     asciilist.Add(90);
                 }
-                else if (charlist[index] == ' ')
+                else if (charlist[index] == ' ') // This 'else if' statement handles white space by putting the ascii code in for a space character. 
                 {
                     asciilist.Add(32);
-                }
-                else
+                } 
+                else // This 'else' statement just adds one to the ascii value. 
                 {
                     asciilist.Add(Convert.ToByte(charlist[index]));
                     asciilist[index] -= Convert.ToByte(1);
                 }
             }
-            foreach (byte ascii in asciilist)
+            foreach (byte ascii in asciilist) // This 'foreach' statement iterates through asciilist and returns the ascii value of every position in the list. This then gets converted back into a string. 
             {
                 outputstring += Convert.ToChar(ascii);
             }

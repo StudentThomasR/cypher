@@ -26,7 +26,7 @@ namespace cypher
                 Debug.Assert(BadCypher.Encrypt("hello") == "mmfip");//7. This is a test line. It will stop the program if the test fails. This is testing the encryption of "hello" which should equal "mmfip".
             }
             {
-                Console.WriteLine(BadCypher.Decrypt("mmfip"));
+                Console.WriteLine(BadCypher.Decrypt("mmfip")); // As far as usability is concerned, I've not done very much. This program was really designed to show tests running on the piece of code, rather than to actually make it usable. As far as some things that I could do to improve usability, I could make the program check input from the user in a console or I could redesign it to become a graphical application. In another project included in this submission, I will improve the console-user input as well as the graphical user interface.
                 Debug.Assert(BadCypher.Decrypt("mmfip") == "hello");
             }
             {
